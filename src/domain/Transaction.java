@@ -1,26 +1,27 @@
 package domain;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 public class Transaction
 {
 
-  private final int id;
-  private final int portfolioId;
+  private final UUID id;
+  private final UUID portfolioId;
   private final String stockSymbol;
-  private final String type;
+  private final TransactionType type;
   private final int quantity;
   private final double pricePerShare;
   private final double totalAmount;
   private final double fee;
   private final LocalDateTime timestamp;
 
-  public Transaction(int id, int portfolioId, String stockSymbol, String type,
+  public Transaction(UUID portfolioId, String stockSymbol, TransactionType type,
       int quantity, double pricePerShare, double totalAmount,
       double fee, LocalDateTime timestamp)
   {
 
-    this.id = id;
+    id = UUID.randomUUID();
     this.portfolioId = portfolioId;
     this.stockSymbol = stockSymbol;
     this.type = type;
@@ -31,15 +32,7 @@ public class Transaction
     this.timestamp = timestamp;
   }
 
-  public int getId()
-  {
-    return id;
-  }
 
-  public int getPortfolioId()
-  {
-    return portfolioId;
-  }
 
   public String getStockSymbol()
   {

@@ -1,30 +1,24 @@
 package domain;
 
+import java.util.UUID;
+
 public class OwnedStock
 {
 
-  private final int id;
-  private final int portfolioId;
+  private final UUID id;
+  private final UUID portfolioId;
   private final String stockSymbol;
   private int numberOfShares;
 
-  public OwnedStock(int id, int portfolioId, String stockSymbol, int numberOfShares)
+  public OwnedStock(UUID portfolioId, String stockSymbol, int numberOfShares)
   {
-    this.id = id;
+    id = UUID.randomUUID();
     this.portfolioId = portfolioId;
     this.stockSymbol = stockSymbol;
     this.numberOfShares = numberOfShares;
   }
 
-  public int getId()
-  {
-    return id;
-  }
 
-  public int getPortfolioId()
-  {
-    return portfolioId;
-  }
 
   public String getStockSymbol()
   {

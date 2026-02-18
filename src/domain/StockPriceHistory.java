@@ -1,26 +1,22 @@
 package domain;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 public class StockPriceHistory
 {
 
-  private final int id;
+  private final UUID id;
   private final String stockSymbol;
   private final double price;
   private final LocalDateTime timestamp;
 
-  public StockPriceHistory(int id, String stockSymbol, double price, LocalDateTime timestamp)
+  public StockPriceHistory(UUID id, String stockSymbol, double price, LocalDateTime timestamp)
   {
     this.id = id;
     this.stockSymbol = stockSymbol;
     this.price = price;
     this.timestamp = timestamp;
-  }
-
-  public int getId()
-  {
-    return id;
   }
 
   public String getStockSymbol()

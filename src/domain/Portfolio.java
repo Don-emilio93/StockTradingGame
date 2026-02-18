@@ -8,6 +8,12 @@ public class Portfolio
   private final UUID id;
   private double currentBalance;
 
+  public Portfolio()
+  {
+    id = UUID.randomUUID();
+    currentBalance = 0;
+  }
+
   public Portfolio(UUID id, double currentBalance)
   {
     if (id == null)
