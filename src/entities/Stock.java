@@ -1,4 +1,4 @@
-package domain;
+package entities;
 
 public class Stock
 {
@@ -8,7 +8,8 @@ public class Stock
   private double currentPrice;
   private String currentState;
 
-  public Stock(String symbol, String name, double currentPrice, String currentState)
+  public Stock(String symbol, String name, double currentPrice,
+      String currentState)
   {
     this.symbol = symbol;
     this.name = name;

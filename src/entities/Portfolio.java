@@ -1,4 +1,4 @@
-package domain;
+package entities;
 
 import java.util.UUID;
 
@@ -17,7 +17,7 @@ public class Portfolio
   public Portfolio(UUID id, double currentBalance)
   {
     if (id == null)
-    this.id = UUID.randomUUID();
+      this.id = UUID.randomUUID();
     else
       this.id = id;
     this.currentBalance = currentBalance;

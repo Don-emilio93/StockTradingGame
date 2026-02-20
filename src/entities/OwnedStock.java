@@ -1,4 +1,4 @@
-package domain;
+package entities;
 
 import java.util.UUID;
 
@@ -17,8 +17,6 @@ public class OwnedStock
     this.stockSymbol = stockSymbol;
     this.numberOfShares = numberOfShares;
   }
-
-
 
   public String getStockSymbol()
   {

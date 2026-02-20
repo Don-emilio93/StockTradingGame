@@ -1,7 +1,6 @@
-package domain;
+package entities;
 
 public enum TransactionType
 {
-  BUY,
-  SELL
+  BUY, SELL
 }

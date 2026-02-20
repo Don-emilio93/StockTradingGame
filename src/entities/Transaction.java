@@ -1,4 +1,4 @@
-package domain;
+package entities;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -17,8 +17,8 @@ public class Transaction
   private final LocalDateTime timestamp;
 
   public Transaction(UUID portfolioId, String stockSymbol, TransactionType type,
-      int quantity, double pricePerShare, double totalAmount,
-      double fee, LocalDateTime timestamp)
+      int quantity, double pricePerShare, double totalAmount, double fee,
+      LocalDateTime timestamp)
   {
 
     id = UUID.randomUUID();
@@ -31,8 +31,6 @@ public class Transaction
     this.fee = fee;
     this.timestamp = timestamp;
   }
-
-
 
   public String getStockSymbol()
   {

@@ -2,10 +2,11 @@ package shared.logging;
 
 public class Logger
 {
-  private static Logger instance;
+  private static volatile Logger instance;
   private LogOutput output;
 
   private Logger()
+
   {
     this.output = new ConsoleLogOutput();
   }
