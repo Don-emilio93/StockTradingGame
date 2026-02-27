@@ -1,49 +1,25 @@
 package shared.configuration;
 
-public class AppConfig
-{
+public class AppConfig {
 
   private static AppConfig instance;
 
-  private final int startingBalance;
-  private final double transactionFee;
-  private final int updateFrequencyInMs;
-  private final double stockResetValue;
+  private int startingBalance = 10000;
+  private double transactionFee = 1.0;
+  private int updateFrequencyInMs = 1000;
+  private double stockResetValue = 100.0;
 
-  private AppConfig()
-  {
-    this.startingBalance = 10000;
-    this.transactionFee = 0.01;
-    this.updateFrequencyInMs = 2000;
-    this.stockResetValue = 100.0;
-  }
+  private AppConfig() {}
 
-  public static AppConfig getInstance()
-  {
-    if (instance == null)
-    {
+  public static AppConfig getInstance() {
+    if (instance == null) {
       instance = new AppConfig();
     }
     return instance;
   }
 
-  public int getStartingBalance()
-  {
-    return startingBalance;
-  }
-
-  public double getTransactionFee()
-  {
-    return transactionFee;
-  }
-
-  public int getUpdateFrequencyInMs()
-  {
-    return updateFrequencyInMs;
-  }
-
-  public double getStockResetValue()
-  {
-    return stockResetValue;
-  }
+  public int getStartingBalance() { return startingBalance; }
+  public double getTransactionFee() { return transactionFee; }
+  public int getUpdateFrequencyInMs() { return updateFrequencyInMs; }
+  public double getStockResetValue() { return stockResetValue; }
 }

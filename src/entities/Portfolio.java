@@ -2,39 +2,15 @@ package entities;
 
 import java.util.UUID;
 
-public class Portfolio
-{
-
+public class Portfolio {
   private final UUID id;
-  private double currentBalance;
+  private final double currentBalance;
 
-  public Portfolio()
-  {
-    id = UUID.randomUUID();
-    currentBalance = 0;
-  }
-
-  public Portfolio(UUID id, double currentBalance)
-  {
-    if (id == null)
-      this.id = UUID.randomUUID();
-    else
-      this.id = id;
+  public Portfolio(UUID id, double currentBalance) {
+    this.id = id;
     this.currentBalance = currentBalance;
   }
 
-  public UUID getId()
-  {
-    return id;
-  }
-
-  public double getCurrentBalance()
-  {
-    return currentBalance;
-  }
-
-  public void setCurrentBalance(double currentBalance)
-  {
-    this.currentBalance = currentBalance;
-  }
+  public UUID getId() { return id; }
+  public double getCurrentBalance() { return currentBalance; }
 }
